@@ -4,6 +4,10 @@ services:
     image: 'bitnami/mongodb:latest'
     expose:
       - 27017
+    environment:
+       - MONGODB_USERNAME=${MONGODB_USERNAME}
+       - MONGODB_PASSWORD=${MONGODB_PASSWORD}
+       - MONGODB_DATABASE=${MONGODB_DATABASE}
     volumes:
       - ./docker/mongo:/bitnami
   website:

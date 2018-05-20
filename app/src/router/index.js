@@ -300,6 +300,6 @@ var router = new Router({
       meta: {auth: false}
     }
   ]
-});
+})
 
 export default router

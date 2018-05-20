@@ -302,4 +302,12 @@ var router = new Router({
   ]
 })
 
+router.beforeEach(function (to, from, next) {
+  if (to.meta.auth && !Vue.isLoggedIn()) {
+    next('/login')
+  } else {
+    next()
+  }
+})
+
 export default router

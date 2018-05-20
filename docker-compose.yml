@@ -4,7 +4,6 @@ services:
     image: 'bitnami/mongodb:latest'
     expose:
       - 27017
-    environment:
     volumes:
       - ./docker/mongo:/bitnami
   website:

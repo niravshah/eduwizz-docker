@@ -74,5 +74,5 @@ app.set('port', port)
 
 var server = http.createServer(app)
 server.listen(port, function () {
-  console.log('Eduwizz API running on localhost: ' + port)
+  console.log('Eduwizz API running on port: ' + port)
 })

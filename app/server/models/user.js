@@ -10,7 +10,7 @@ var userSchema = new Schema({
   firstLogin: {type: Boolean, default: true},
   active: {type: Boolean, default: true},
   locked: {type: Boolean, default: false},
-  group: {type: mongoose.Schema.Types.ObjectId, ref: 'Group', required: true},
+  group: {type: mongoose.Schema.Types.ObjectId, ref: 'Group', required: false},
   permissions: {
     maths: {type: Boolean, default: false},
     chemistry: {type: Boolean, default: false},

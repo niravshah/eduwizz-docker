@@ -10,8 +10,9 @@ var app = express()
 require('dotenv').config()
 
 var mongoose = require('mongoose')
-mongoose.Promise = global.Promise
-mongoose.connect(process.env.MONGO_URL, {useMongoClient: true})
+mongoose.connect(process.env.MONGO_URL)
+  .then(() => console.log('mongo connection successful'))
+  .catch((err) => console.error(err));
 
 app.set('views', path.join(__dirname, './server/views'))
 app.set('view engine', 'ejs')

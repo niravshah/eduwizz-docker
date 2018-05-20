@@ -10,7 +10,8 @@ var app = express()
 require('dotenv').config()
 
 var mongoose = require('mongoose')
-mongoose.connect(process.env.MONGO_URL)
+var url = "mongodb://" + process.env.MONGODB_USERNAME + ":" + process.env.MONGODB_PASSWORD + "@mongodb/" + process.env.MONGODB_DATABASE
+mongoose.connect(url)
   .then(() => console.log('mongo connection successful'))
   .catch((err) => console.error(err));
 

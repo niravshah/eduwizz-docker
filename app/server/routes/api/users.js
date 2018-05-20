@@ -69,7 +69,7 @@ module.exports = function (passport) {
     console.log('Request Body', req.body)
     User.findOne({username: req.body.username}, function (err, user) {
       if (err) {
-        res.status(500).json({message: 'An unexpected error occurred while creating new user'})
+        res.status(500).json({message: 'An unexpected error occurred while creating new user',error:err})
       } else {
         if (user) {
           res.status(500).json({message: 'A user with this username already exists'})
@@ -77,7 +77,7 @@ module.exports = function (passport) {
           utils.createUser(req.body.name, req.body.email, req.body.password, req.body.username,
             req.body.maths, req.body.physics, req.body.chemistry, req.body.biology, function (err, user) {
               if (err) {
-                res.status(500).json({message: 'An unexpected error occurred while creating new user'})
+                res.status(500).json({message: 'An unexpected error occurred while creating new user',error:err})
               } else {
                 if (user) {
                   res.json({message: 'User Created'})

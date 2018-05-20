@@ -66,7 +66,7 @@ module.exports = function (passport) {
   })
 
   router.post('/api/admin/users', (req, res) => {
-    console.log('Request Body', req.body)
+
     User.findOne({username: req.body.username}, function (err, user) {
       if (err) {
         res.status(500).json({message: 'An unexpected error occurred while creating new user',error:err})

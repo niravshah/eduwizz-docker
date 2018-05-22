@@ -21,7 +21,7 @@ module.exports = function (passport) {
       }
     }], function (err, results) {
       if (err) {
-        res.status(500).json({message: 'Error fetching list of papers'})
+        res.status(500).json({message: 'Error fetching list of papers',error:err})
       } else {
         var retArr = {}
         for (var i = 0; i < results.length; i++) {

@@ -64,7 +64,7 @@
               </div>
               <footer>
                 <div class="centered">
-                  <h5><i class="fa fa-file-text-o"></i> {{counts.physics}} Papers</h5>
+                  <h5><i class="fa fa-file-text-o"></i> {{counts.chemistry}} Papers</h5>
                 </div>
               </footer>
             </div>

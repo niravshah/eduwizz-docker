@@ -29,7 +29,7 @@
               <div class="row pb20">
                 <div class="col-md-12">
                   <input type="password" v-model="password" name="password" class="form-control" placeholder="Password"
-                         v-validate="'required'">
+                         v-validate="'required'" v-on:keyup.enter="login()">
                   <small class="pt10 error" v-show="errors.has('password')">
                     {{ errors.first('password')}}
                   </small>

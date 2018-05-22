@@ -11,6 +11,9 @@ require('dotenv').config()
 
 var mongoose = require('mongoose')
 var url = "mongodb://" + process.env.MONGODB_USERNAME + ":" + process.env.MONGODB_PASSWORD + "@mongodb/" + process.env.MONGODB_DATABASE
+if (process.env.NODE_ENV == "development") {
+  url = process.env.MONGO_URL
+}
 mongoose.connect(url)
   .then(() => console.log('mongo connection successful'))
   .catch((err) => console.error(err));

@@ -71,6 +71,42 @@
           </a>
         </div>
       </div>
+      <div class="row mt">
+        <div class="col-md-4 col-sm-4 mb">
+          <a href="#/answers/submit">
+            <div class="darkblue-panel pn">
+              <div class="darkblue-header">
+                <h5>UPLOAD ANSWER SHEET</h5>
+              </div>
+              <div class="mt mb text-center">
+                <img src="/static/img/answer-sheet.png">
+              </div>
+              <footer>
+                <div class="centered">
+                  <h5><i class="fa fa-file-text-o"></i> {{counts.maths}} Papers</h5>
+                </div>
+              </footer>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-4 mb">
+          <a href="#/results">
+            <div class="darkblue-panel pn">
+              <div class="darkblue-header">
+                <h5>VIEW RESULTS</h5>
+              </div>
+              <div class="mt mb text-center">
+                <img src="/static/img/results.png">
+              </div>
+              <footer>
+                <div class="centered">
+                  <h5><i class="fa fa-file-text-o"></i> {{counts.maths}} Papers</h5>
+                </div>
+              </footer>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </template>
